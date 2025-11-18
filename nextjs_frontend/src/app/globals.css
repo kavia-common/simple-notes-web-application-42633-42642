@@ -1,26 +1,52 @@
 @import "tailwindcss";
+@import "./ocean-utilities.css";
 
+/* Ocean Professional Theme Tokens */
 :root {
-  --color-primary: #000000;
-  --color-secondary: #FFFFFF;
-  --color-accent: #3B82F6;
-  --color-background: #FFFFFF;
+  --ocean-primary: #2563EB;   /* blue-600 */
+  --ocean-secondary: #F59E0B; /* amber-500 */
+  --ocean-success: #F59E0B;   /* use amber as success accent per guide */
+  --ocean-error: #EF4444;     /* red-500 */
+  --ocean-background: #f9fafb;
+  --ocean-surface: #ffffff;
+  --ocean-text: #111827;
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--color-background);
-  color: var(--color-primary);
+  background-color: var(--ocean-background);
+  color: var(--ocean-text);
 }
 
 body {
-  font-family: system-ui, -apple-system, sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Smooth focus outlines for accessibility */
+:focus-visible {
+  outline: 2px solid rgba(37, 99, 235, 0.6);
+  outline-offset: 2px;
+}
+
+/* Basic typography scaling */
+h1,h2,h3,h4,h5,h6 {
+  color: #0f172a;
+}
+
+.shadow-sm {
+  box-shadow: 0 1px 2px 0 rgba(2,6,23,0.06);
+}
+
+.shadow {
+  box-shadow: 0 2px 6px rgba(2,6,23,0.10);
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 30px rgba(2,6,23,0.12);
 }
